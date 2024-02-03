@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flickpeek - Unveil Cinematic Wonders</title>
+  <meta name="description" content="Flickpeek offers a cinematic adventure at your fingertips! Explore trending now-playing movies, discover timeless classics, and delve into top-rated and upcoming releases. Dive deep into your favorite genres and uncover hidden gems. With Flickpeek, search for movie details effortlessly, empowering you to indulge your passion for film anytime, anywhere.">
+  <meta name="author" content="Lakhindar Pal">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://flickpeek.glitch.me">
+  <meta name="twitter:title" content="Unveil Cinematic Wonders with Flickpeek">
+  <meta name="twitter:description" content="Flickpeek offers a cinematic adventure at your fingertips! Explore trending now-playing movies, discover timeless classics, and delve into top-rated and upcoming releases. Dive deep into your favorite genres and uncover hidden gems. With Flickpeek, search for movie details effortlessly, empowering you to indulge your passion for film anytime, anywhere.">
+  <meta name="twitter:image" content="icons/wide-image-1200x630.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flickpeek.glitch.me">
+  <meta property="og:title" content="Unveil Cinematic Wonders with Flickpeek">
+  <meta property="og:description" content="Flickpeek offers a cinematic adventure at your fingertips! Explore trending now-playing movies, discover timeless classics, and delve into top-rated and upcoming releases. Dive deep into your favorite genres and uncover hidden gems. With Flickpeek, search for movie details effortlessly, empowering you to indulge your passion for film anytime, anywhere.">
+  <meta property="og:image" content="icons/wide-image-1200x630.png">
+
+  <link rel="icon" sizes="512x512" href="icons/android-icon-512x512.png">
+  <link rel="icon" sizes="192x192" href="icons/android-icon-192x192.png">
+  <link rel="icon" sizes="144x144" href="icons/android-icon-144x144.png">
+
+  <link rel="apple-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+  <link rel="apple-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+  <link rel="apple-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+
+  <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+  <meta name="msapplication-square150x150logo" content="icons/ms-icon-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="icons/ms-icon-310x150.png">
+  <meta name="msapplication-square310x310logo" content="icons/ms-icon-310x310.png">
+  <meta name="msapplication-TileColor" content="#007bff">
+
+  <meta name="theme-color" content="#007bff">
+  <link rel="manifest" href="pwa/manifest.json">
+  <meta name="msapplication-config" content="pwa/browserconfig.xml" />
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("pwa/sw.js")
+        .then((reg) => console.log("Service Worker registered", reg))
+        .catch((err) =>
+          console.error("Service Worker **not** registered", err)
+        );
+    } else {
+      console.warn("Service Worker not supported in this browser");
+    }
+  </script>
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="branding">
+      <img id="logo" src="icons/android-icon-512x512.png" alt="Flickpeek Logo">
+      <h1>Flickpeek</h1>
+    </div>
+    <nav id="navbar">
+      <button id="now-playing">Now Playing</button>
+      <select aria-label="Find trending movies" id="trending">
+        <option value="">Trending</option>
+        <option value="day">Today</option>
+        <option value="week">Week</option>
+      </select>
+      <button id="popular">Popular</button>
+      <button id="top-rated">Top Rated</button>
+      <button id="upcoming">Upcoming</button>
+      <select aria-label="Explore movies based on genre" id="genre">
+        <option value="">Genre</option>
+        <option value="28">Action</option>
+        <option value="12">Adventure</option>
+        <option value="16">Animation</option>
+        <option value="35">Comedy</option>
+        <option value="80">Crime</option>
+        <option value="99">Documentary</option>
+        <option value="18">Drama</option>
+        <option value="10751">Famil</option>
+        <option value="14">Fantasy</option>
+        <option value="36">History</option>
+        <option value="27">Horror</option>
+        <option value="10402">Music</option>
+        <option value="9648">Myster</option>
+        <option value="10749">Romance</option>
+        <option value="878">Sci-fi</option>
+        <option value="10770">TV Movie</option>
+        <option value="53">Thriller</option>
+        <option value="10752">War</option>
+        <option value="37">Western</option>
+      </select>
+    </nav>
+    <div id="searchbar">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Content will be added dynamically -->
+  </main>
+
+  <footer>
+    <p>
+      <span>Made with ❤️ by</span>
+      <a href="https://github.com/LakhindarPal" target="_blank" rel="noopener noreferrer">Lakhindar</a>.
+    </p>
+    <p>
+      <span>Powered by</span>
+      <a href="https://themoviedb.org" target="_blank" rel="noopener noreferrer">TMDB</a>.
+    </p>
+  </footer>
+
+</body>
+
+</html>
